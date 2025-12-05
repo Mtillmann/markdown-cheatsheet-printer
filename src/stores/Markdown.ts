@@ -16,7 +16,7 @@ export const useMarkdownStore = defineStore("markdown", {
   }),
   actions: {
     async init(forceDefault:boolean = false) {
-      const request = await fetch("/default-document.md");
+      const request = await fetch("default-document.md");
       const defaultContent = await request.text();
 
       const buffer = await file(filename).arrayBuffer();

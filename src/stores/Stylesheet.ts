@@ -12,7 +12,7 @@ export const useStylesheetStore = defineStore("stylesheet", {
   }),
   actions: {
     async init(forceDefault: boolean = false) {
-      const request = await fetch("/stylesheets/custom.css");
+      const request = await fetch("stylesheets/custom.css");
       const defaultStylesheet = await request.text();
 
       const buffer = await file(filename).arrayBuffer();
