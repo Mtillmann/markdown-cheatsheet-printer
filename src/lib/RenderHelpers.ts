@@ -64,7 +64,7 @@ export default {
   hljsTheme(dom: HTMLElement, theme:string):void {
     ensureLinkElem("highlightJSThemeStylesheet").setAttribute(
       "href",
-      `node_modules/highlight.js/styles/${theme}.css`
+      `./hljs-styles/${theme}.css`
     );
   },
   moveFootnotesToFooter(dom: HTMLElement) {
