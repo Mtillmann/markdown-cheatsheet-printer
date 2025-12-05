@@ -113,7 +113,7 @@ use `\<header\>` and `\<footer\>` tags to define the document's header and foote
 
 When `renderKBD` is enabled, use <kbd> tags to label keyboard keys:
 
-- `\<kbd\>F5\</kbd\>`: single press
+- `<kbd>F5\</kbd\>`: single press
 - `\<kbd\>Ctrl + A\</kbd\>`: chord  
 - `\<kbd\>Ctrl + Shift + P\</kbd\>`: stacked chord  
 - `\<kbd\>F5\</kbd\>\<kbd\>F12\</kbd\>`: sequence  
