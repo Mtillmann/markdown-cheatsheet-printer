@@ -1,0 +1,18 @@
+/*
+  your custom styles for the html generated from markdown.
+   
+  - wrap all your styles in the .custom selector
+  - All selectors in this file will be prefixed with .document (.custom -> .document.custom ...)
+  - examples: https://github.com/Mtillmann/markdown-cheatsheet-printer/tree/main/public/stylesheets
+  - @import statements can be used to import fonts or other stylesheets
+  - content is persisted in OPFS
+*/
+
+.custom {
+    --foo:bar;
+
+  kbd {
+    display: inline-block;
+    margin-bottom: 0.35em;
+  }
+}

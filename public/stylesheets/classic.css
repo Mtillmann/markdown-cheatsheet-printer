@@ -1,0 +1,179 @@
+.document[data-theme="classic"]{
+    --theme-primary: var(--theme-color-primary, #000);
+    --theme-secondary: var(--theme-color-secondary, #e0e0e0);
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100%;
+    line-height: 1.2;
+    max-width: 100%;
+    padding: 0;
+    background: white;
+    color: var(--theme-primary);
+
+    h1 {
+        font-size: 1.56em;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: color-mix(in srgb, var(--theme-primary) 92%, black 8%);
+        color: white;
+        border-bottom: 2px solid color-mix(in srgb, white 25%, var(--theme-primary));
+        margin: 0 0 8px 0;
+        padding: 4px 6px;
+        page-break-after: avoid;
+    }
+
+    h2 {
+        font-size: 1.22em;
+        font-weight: bold;
+        background: color-mix(in srgb, var(--theme-primary) 85%, black 15%);
+        color: white;
+        margin: 12px 0 4px 0;
+        padding: 3px 5px;
+        border-bottom: 1px solid color-mix(in srgb, white 30%, var(--theme-primary));
+        page-break-after: avoid;
+    }
+
+    h3 {
+        font-size: 1.11em;
+        font-weight: bold;
+        background: color-mix(in srgb, var(--theme-primary) 75%, black 25%);
+        color: white;
+        padding: 2px 4px;
+        border-left: 3px solid color-mix(in srgb, white 20%, var(--theme-primary));
+        margin: 8px 0 3px 0;
+        page-break-after: avoid;
+    }
+
+    p {
+        margin: 4px 0;
+        orphans: 3;
+        widows: 3;
+    }
+
+    ul, ol {
+        margin: 4px 0;
+        padding-left: 18px;
+    }
+
+    li {
+        margin: 1px 0;
+    }
+
+    code {
+        padding: 1px 3px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    kbd {
+        display: inline-block;
+        margin-bottom: 0.35em;
+    }
+
+    pre {
+        display: block;
+        border: 1px solid var(--theme-primary);
+        padding: 6px;
+        margin: 6px 0;
+        overflow-x: auto;
+        page-break-inside: avoid;
+
+        code {
+            display: block;
+            padding: 0;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 6px 0;
+        font-size: 0.89em;
+        page-break-inside: avoid;
+    }
+
+    th, td {
+        border: 1px solid var(--theme-primary);
+        padding: 3px 5px;
+        text-align: left;
+    }
+
+    th {
+        background: #e8e8e8;
+        font-weight: bold;
+    }
+
+    blockquote {
+        border-left: 2px solid var(--theme-primary);
+        padding-left: 8px;
+        margin: 6px 0;
+        font-style: italic;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    /* Definition lists (dl plugin) */
+    dl {
+        margin: 8px 0;
+    }
+
+    dt {
+        font-size: 1.11em;
+        font-weight: bold;
+        margin-top: 8px;
+        margin-bottom: 2px;
+    }
+
+    dd {
+        margin-left: 15px;
+        margin-bottom: 6px;
+        padding-left: 5px;
+        border-left: 2px solid var(--theme-primary);
+    }
+
+    /* Insert/underline (ins plugin) */
+    ins {
+        text-decoration: underline;
+    }
+
+    /* Mark/highlight (mark plugin) */
+    mark {
+        background: var(--theme-secondary);
+        padding: 0 2px;
+    }
+
+    /* Subscript (sub plugin) */
+    sub {
+        font-size: 0.75em;
+        vertical-align: sub;
+    }
+
+    /* Superscript (sup plugin) */
+    sup {
+        font-size: 0.75em;
+        vertical-align: super;
+    }
+
+    /* Footnotes (footnote plugin) */
+    .footnote-ref {
+        font-size: 0.75em;
+        vertical-align: super;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 2px solid var(--theme-primary);
+        font-size: 0.89em;
+        text-align: center;
+
+
+    }
+}
+}

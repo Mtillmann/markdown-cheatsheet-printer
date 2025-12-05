@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Patrick+Hand&display=swap');
+
+.document[data-theme="study"]{
+    --theme-primary: var(--theme-color-primary, #2c5aa0);
+    --theme-secondary: var(--theme-color-secondary, #e8e8e8);
+    
+    font-family: 'Patrick Hand', 'Comic Sans MS', cursive, sans-serif;
+    font-size: 100%;
+    line-height: 1.6;
+    max-width: 100%;
+    padding: 0;
+    background: white;
+    color: #2c2c2c;
+
+    h1 {
+        font-family: 'Caveat', cursive, sans-serif;
+        font-size: 2.2em;
+        font-weight: 700;
+        color: var(--theme-primary);
+        margin: 0 0 12px 0;
+        padding: 8px 0;
+        text-decoration: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: var(--theme-primary);
+        page-break-after: avoid;
+    }
+
+    h2 {
+        font-family: 'Caveat', cursive, sans-serif;
+        font-size: 1.8em;
+        font-weight: 600;
+        color: var(--theme-primary);
+        margin: 14px 0 8px 0;
+        padding: 5px 0;
+        border-bottom: 2px solid var(--theme-primary);
+        page-break-after: avoid;
+    }
+
+    h3 {
+        font-family: 'Caveat', cursive, sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        color: #555;
+        margin: 12px 0 6px 0;
+        page-break-after: avoid;
+    }
+
+    h4 {
+        font-family: 'Caveat', cursive, sans-serif;
+        font-size: 1.3em;
+        font-weight: 600;
+        margin: 10px 0 4px 0;
+        color: #666;
+        page-break-after: avoid;
+    }
+
+    p {
+        margin: 6px 0;
+        orphans: 3;
+        widows: 3;
+    }
+
+    ul, ol {
+        margin: 8px 0;
+        padding-left: 25px;
+    }
+
+    li {
+        margin: 4px 0;
+        line-height: 1.5;
+    }
+
+    ul li::marker {
+        content: '• ';
+        color: var(--theme-primary);
+    }
+
+    code {
+        font-family: 'Courier New', Monaco, monospace;
+        font-size: 0.9em;
+        padding: 2px 5px;
+        background: var(--theme-secondary);
+        border: 1px dashed #999;
+    }
+
+    kbd {
+        display: inline-block;
+        margin-bottom: 0.35em;
+    }
+
+    pre {
+        display: block;
+        font-family: 'Courier New', Monaco, monospace;
+        font-size: 0.9em;
+        background: var(--theme-secondary);
+        border: 2px solid var(--theme-primary);
+        padding: 10px;
+        margin: 10px 0;
+        overflow-x: auto;
+        page-break-inside: avoid;
+
+        code {
+            display: block;
+            padding: 0;
+            background: none;
+            border: none;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 10px 0;
+        font-size: 0.9em;
+        page-break-inside: avoid;
+    }
+
+    th, td {
+        border: 1px solid var(--theme-primary);
+        padding: 5px 8px;
+        text-align: left;
+    }
+
+    th {
+        background: var(--theme-secondary);
+        font-weight: bold;
+        color: var(--theme-primary);
+    }
+
+    blockquote {
+        background: var(--theme-secondary);
+        border-left: 4px solid var(--theme-primary);
+        padding: 10px 15px;
+        margin: 10px 0;
+        font-style: italic;
+    }
+
+    strong {
+        font-weight: bold;
+        background: linear-gradient(transparent 60%, #ffeb3b 60%);
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    hr {
+        border: none;
+        border-top: 2px dashed var(--theme-primary);
+        margin: 15px 0;
+    }
+
+    /* Definition lists (dl plugin) */
+    dl {
+        margin: 12px 0;
+    }
+
+    dt {
+        font-family: 'Caveat', cursive, sans-serif;
+        font-size: 1.4em;
+        font-weight: 600;
+        color: var(--theme-primary);
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+
+    dd {
+        margin-left: 20px;
+        margin-bottom: 8px;
+        padding: 6px 10px;
+        background: var(--theme-secondary);
+        border-left: 3px solid var(--theme-primary);
+    }
+
+    /* Insert/underline (ins plugin) */
+    ins {
+        text-decoration: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: var(--theme-primary);
+    }
+
+    /* Mark/highlight (mark plugin) */
+    mark {
+        background: #ffeb3b;
+        padding: 0 3px;
+    }
+
+    /* Subscript (sub plugin) */
+    sub {
+        font-size: 0.75em;
+        vertical-align: sub;
+    }
+
+    /* Superscript (sup plugin) */
+    sup {
+        font-size: 0.75em;
+        vertical-align: super;
+    }
+
+    /* Footnotes (footnote plugin) */
+    .footnote-ref {
+        font-size: 0.75em;
+        vertical-align: super;
+        color: var(--theme-primary);
+        text-decoration: none;
+    }
+
+    .footnote-ref:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 25px;
+        padding-top: 15px;
+        border-top: 2px dashed var(--theme-primary);
+        font-size: 0.9em;
+        text-align: center;
+
+
+    }
+}

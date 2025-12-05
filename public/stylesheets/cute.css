@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
+
+.document[data-theme="cute"]{
+    --theme-primary: var(--theme-color-primary, #ff69b4);
+    --theme-secondary: var(--theme-color-secondary, #ffe4f0);
+    
+    font-family: 'Segoe UI', 'Arial Rounded MT Bold', 'Varela Round', 'Quicksand', sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    max-width: 100%;
+    padding: 0;
+    background: white;
+    color: #333;
+
+    h1 {
+        font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        color: var(--theme-primary);
+        background: var(--theme-secondary);
+        margin: 0 0 12px 0;
+        padding: 10px 15px;
+        border-radius: 15px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        page-break-after: avoid;
+    }
+
+    h2 {
+        font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif;
+        font-size: 1.56em;
+        font-weight: 600;
+        color: var(--theme-primary);
+        background: #fff5f9;
+        margin: 14px 0 8px 0;
+        padding: 7px 12px;
+        border-radius: 12px;
+        page-break-after: avoid;
+    }
+
+    h3 {
+        font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif;
+        font-size: 1.33em;
+        font-weight: 600;
+        color: var(--theme-primary);
+        margin: 12px 0 6px 0;
+        padding: 5px 10px;
+        background: var(--theme-secondary);
+        border-radius: 8px;
+        page-break-after: avoid;
+    }
+
+    h4 {
+        font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif;
+        font-size: 1.11em;
+        font-weight: 600;
+        margin: 10px 0 4px 0;
+        color: var(--theme-primary);
+        page-break-after: avoid;
+    }
+
+    p {
+        margin: 6px 0;
+        orphans: 3;
+        widows: 3;
+    }
+
+    ul, ol {
+        margin: 8px 0;
+        padding-left: 25px;
+    }
+
+    li {
+        margin: 4px 0;
+        line-height: 1.4;
+    }
+
+    code {
+        font-family: 'Consolas', 'Monaco', monospace;
+        font-size: 0.94em;
+        padding: 2px 6px;
+        background: #fff0f7;
+        border-radius: 5px;
+    }
+
+    kbd {
+        display: inline-block;
+        margin-bottom: 0.35em;
+    }
+
+    pre {
+        display: block;
+        font-family: 'Consolas', 'Monaco', monospace;
+        font-size: 0.94em;
+        background: #fffafc;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0;
+        overflow-x: auto;
+        page-break-inside: avoid;
+
+        code {
+            display: block;
+            padding: 0;
+            background: none;
+            border-radius: 0;
+        }
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        margin: 10px 0;
+        font-size: 0.94em;
+        page-break-inside: avoid;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    th, td {
+        border-bottom: 1px solid #ffc0e0;
+        border-right: 1px solid #ffc0e0;
+        padding: 6px 10px;
+        text-align: left;
+    }
+
+    th:last-child, td:last-child {
+        border-right: none;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    th {
+        background: var(--theme-secondary);
+        font-weight: bold;
+        color: var(--theme-primary);
+    }
+
+    tr:nth-child(even) {
+        background: #fffafd;
+    }
+
+    blockquote {
+        background: #fff5f9;
+        border-left: 5px solid var(--theme-primary);
+        border-radius: 0 10px 10px 0;
+        padding: 10px 15px;
+        margin: 10px 0;
+        font-style: italic;
+    }
+
+    strong {
+        font-weight: bold;
+        color: var(--theme-primary);
+    }
+
+    em {
+        font-style: italic;
+        color: #ff85c1;
+    }
+
+    hr {
+        border: none;
+        height: 2px;
+        background: repeating-linear-gradient(
+            90deg,
+            var(--theme-primary) 0px,
+            var(--theme-primary) 10px,
+            transparent 10px,
+            transparent 20px
+        );
+        margin: 15px 0;
+    }
+
+    /* Definition lists (dl plugin) */
+    dl {
+        margin: 12px 0;
+    }
+
+    dt {
+        font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif;
+        font-size: 1.22em;
+        font-weight: 600;
+        color: var(--theme-primary);
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+
+    dd {
+        margin-left: 20px;
+        margin-bottom: 8px;
+        padding: 6px 10px;
+        background: #fffafd;
+        border-left: 4px solid var(--theme-primary);
+        border-radius: 0 5px 5px 0;
+    }
+
+    /* Insert/underline (ins plugin) */
+    ins {
+        text-decoration: underline;
+        text-decoration-color: var(--theme-primary);
+        text-decoration-style: wavy;
+    }
+
+    /* Mark/highlight (mark plugin) */
+    mark {
+        background: var(--theme-secondary);
+        padding: 2px 5px;
+        border-radius: 4px;
+        color: var(--theme-primary);
+    }
+
+    /* Subscript (sub plugin) */
+    sub {
+        font-size: 0.75em;
+        vertical-align: sub;
+    }
+
+    /* Superscript (sup plugin) */
+    sup {
+        font-size: 0.75em;
+        vertical-align: super;
+    }
+
+    /* Footnotes (footnote plugin) */
+    .footnote-ref {
+        font-size: 0.75em;
+        vertical-align: super;
+        color: var(--theme-primary);
+        text-decoration: none;
+        background: var(--theme-secondary);
+        padding: 1px 4px;
+        border-radius: 3px;
+    }
+
+    .footnote-ref:hover {
+        background: #ffc0e0;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 30px;
+        padding: 15px;
+        background: white;
+        border: 2px solid var(--theme-secondary);
+        border-radius: 10px;
+        font-size: 0.94em;
+        text-align: center;
+        color: var(--theme-primary);
+
+
+    }
+}
+
+

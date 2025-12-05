@@ -1,0 +1,224 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+html,
+body {
+    overflow: hidden !important;
+}
+
+.page {
+    /*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+    }
+
+    body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+        display: block;
+        max-width: 100%;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        overflow-wrap: break-word;
+    }
+
+    p {
+        text-wrap: pretty;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-wrap: balance;
+    }
+
+    #root,
+    #__next {
+        isolation: isolate;
+    }
+}
+
+
+#pagePreview {
+    grid-template-columns: repeat(var(--gtc-columns, 1), minmax(0, 1fr));
+}
+
+#app {
+    z-index: 32;
+}
+
+
+#app .page-preview {
+    aspect-ratio: var(--page-aspect-ratio);
+    position: relative;
+
+    color: black;
+
+    & .page {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform:translate(var(--translateX), var(--translateY)) scale(var(--scale));
+        pointer-events: none;
+        z-index: 2;
+        /*actual.style.visibility = 'hidden'*/
+        transform-origin: top left;
+    }
+}
+
+
+@media print {
+
+    html,
+    body {
+        all: unset !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body.use-extra-scaling {
+        --extra-width: var(--extra-width-scaled);
+        --page-width: var(--page-width-scaled);
+        --page-height: var(--page-height-scaled);
+        --column-gap: var(--column-gap-scaled);
+        --scaled-font-size: var(--scaled-font-size-scaled);
+    }
+
+
+    body>* {
+        display: none;
+
+
+
+    }
+
+    body>.page {
+        display: block;
+        page-break-after: always;
+        page-break-inside: avoid;
+        transform: none !important;
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+
+        &,
+        * {
+            box-sizing: border-box !important;
+        }
+    }
+
+
+    body>.test {
+        display: block;
+    }
+
+}
+
+
+.page {
+
+    font-size:var(--scaled-font-size);
+
+    @media screen {
+        body>& {
+            position: absolute;
+            left: calc(-200vw);
+            top: calc(-200vh);
+        }
+    }
+
+
+    width: var(--page-width);
+    height: var(--page-height);
+    overflow: hidden;
+
+    position:relative;
+
+
+
+    .content {
+        columns: calc(var(--cols-per-page) * var(--pages-across));
+        column-gap: var(--column-gap);
+
+        height: calc(var(--pages-down) * var(--page-height));
+        width: calc(var(--pages-across) * var(--page-width) + var(--extra-width));
+
+
+
+        position: absolute;
+
+
+        left: calc((var(--x) * var(--page-width) * -1) - (var(--column-gap) * var(--x)));
+        top: calc(var(--y) * var(--page-height) * -1);
+
+        /*
+        --x-pos:calc((var(--x) * var(--page-width) * -1) - (var(--column-gap) * var(--x)));
+        --y-pos:calc(var(--y) * var(--page-height) * -1);
+        transform:translate(var(--x-pos), var(--y-pos));
+*/
+        .document {}
+
+
+    }
+}
+
+
+
+#reflowContainer {
+
+    font-size: 100%;
+
+    background: blue;
+    position: absolute;
+
+    z-index: 99;
+    transform: translate(-150%, -150%) scale(0.2);
+
+    width: calc(var(--pages-across) * var(--page-width));
+    height: calc(var(--pages-down) * var(--page-height));
+
+    & .document {
+        columns: calc(var(--cols-per-page) * var(--pages-across));
+        column-gap: var(--column-gap);
+    }
+
+
+
+    top: 50%;
+    left: 50%;
+}
