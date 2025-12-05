@@ -113,12 +113,12 @@ use `\<header\>` and `\<footer\>` tags to define the document's header and foote
 
 When `renderKBD` is enabled, use <kbd> tags to label keyboard keys:
 
-- `<kbd>F5\</kbd\>`: single press
-- `\<kbd\>Ctrl + A\</kbd\>`: chord  
-- `\<kbd\>Ctrl + Shift + P\</kbd\>`: stacked chord  
-- `\<kbd\>F5\</kbd\>\<kbd\>F12\</kbd\>`: sequence  
-- `\<kbd\>Ctrl + S\</kbd\>\<kbd\>Enter\</kbd\>`: chord then press  
-- `\<kbd\>Esc\</kbd\>\<kbd\>Ctrl + P\</kbd\>`: press then chord  
-- `\<kbd\>A\</kbd\>\<kbd\>B\</kbd\>\<kbd\>C\</kbd\>`: multi-step sequence  
+- `<kbd>F5</kbd>`: single press
+- `<kbd>Ctrl + A</kbd>`: chord  
+- `<kbd>Ctrl + Shift + P</kbd>`: stacked chord  
+- `<kbd>F5</kbd><kbd>F12</kbd>`: sequence  
+- `<kbd>Ctrl + S</kbd><kbd>Enter</kbd>`: chord then press  
+- `<kbd>Esc</kbd><kbd>Ctrl + P</kbd>`: press then chord  
+- `<kbd>A</kbd><kbd>B</kbd><kbd>C</kbd>`: multi-step sequence  
 
-For better readability inside your source markdown, you can use `,`, `then`, or `->` between `\<kbd\>` elements. These values will be replace with an arrow-symbol in the output.
+For better readability inside your source markdown, you can use `,`, `then`, or `->` between `<kbd>` elements. These values will be replace with an arrow-symbol in the output.
